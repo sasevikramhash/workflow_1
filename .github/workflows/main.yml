@@ -1,0 +1,20 @@
+name: workflow_1
+on:
+   push:
+     branches: main
+jobs:
+  workflow__11:
+    runs-on: ubuntu-latest
+    steps:
+      - name: action_check
+        uses: actions/checkout@v4
+      - name: check files
+        run: ls
+      - name: check html files
+        run: test -f index.html
+      - name: check css files
+        run: test -f style.css
+      - name: check js files
+        run: test -f home.js
+      - name: Run__Sucess__Msg__Wokflow
+        run: echo "Workflow__1__Run__Sucessfully"
